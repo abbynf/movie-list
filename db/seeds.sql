@@ -1,1 +1,1 @@
--- Create dummy data for development
+INSERT INTO movies (movie_name, watched) VALUES ("Inception", FALSE), ("Scream", TRUE), ("Scott Pilgram vs The World", FALSE), ("Detective Pikachu", TRUE);
