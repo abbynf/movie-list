@@ -21,8 +21,11 @@ var orm = {
             console.log("Successfully added " + movieTitle)
         })
     },
-    updateOne: function(){
-
+    updateOne: function(movieTitle, id, seen){
+        connection.query("UPDATE movies SET watched=? WHERE id=?", [seen, id],function(err, res){
+            if (err) throw err;
+            console.log("Successfully updated " + movieTitle);
+        })
     }
 }
 
