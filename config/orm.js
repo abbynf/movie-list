@@ -6,11 +6,11 @@ var connection = require("./connection.js");
 
 // Create custom orm
 var orm = {
-    selectAll: function(){
+    selectAll: function(cb){
         connection.query("SELECT * FROM movies", function(err, res){
             // display all movies in the movies table
             if (err) throw err;
-            console.log(res);
+            cb(res);
         })
     },
     insertOne: function(movieTitle){
