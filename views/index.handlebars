@@ -14,16 +14,17 @@
 
         {{!-- Column of unwatched movies --}}
         <div class="col">
+            <h2>Movies to Watch</h2>
             <ul>
                 {{#each movies}}
                 {{#unless watched}}
 
                 <div class="row">
                     <div class="col">
-                        <li>{{ movie_name }}</li>
+                        <li data-movieId="{{this.id}}">{{ movie_name }}</li>
                     </div>
                     <div class="col">
-                        <button data-movieId="{{this.id}}" class="watchMovie">Watch movie!</button>
+                        <button data-id="{{this.id}}" class="watchMovie">Watch movie!</button>
                     </div>
                 </div>
                 {{/unless}}
@@ -33,6 +34,7 @@
 
         {{!-- Column of watched movies --}}
         <div class="col">
+            <h2>Watched Movies</h2>
             <ul>
                 {{#each movies}}
                 {{#if watched}}
@@ -42,14 +44,30 @@
                         <li>{{ movie_name }}</li>
                     </div>
                     <div class="col">
-                        <button data-movieId="{{this.id}}" class="unwatchMovie">Unwatch Movie!</button>
+                        <button data-id="{{this.id}}" class="unwatchMovie">Unwatch Movie!</button>
                     </div>
                 </div>
-                
+
                 {{/if}}
                 {{/each}}
             </ul>
 
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <h2>Add a Movie</h2>
+        </div>
+    </div>
+    <form>
+        <div class="row">
+            <div class="col">
+                <input id="newTitle" type="text">
+            </div>
+            <div class="col">
+                <button class="btn btn-success" type="submit">Add Movie</button>
+            </div>
+        </div>
+    </form>
+
 </div>

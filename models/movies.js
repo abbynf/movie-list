@@ -2,9 +2,12 @@
 const orm = require('./../config/orm.js')
 
 var movie = {
-    all: function(){
+    all: function(cb){
+        orm.selectAll(function(res){
+            cb(res);
+        });
+
         // Call orm to view all movies
-        orm.selectAll();
     },
     create: function(movieTitle){
         // call orm to insert the chosen movie title
