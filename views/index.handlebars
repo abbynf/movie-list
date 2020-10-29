@@ -1,1 +1,55 @@
-{{!-- insert into main layout --}}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Movie List</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <p>Add movies down below to your movie list, then press the button to move them to your watched list!</p>
+        </div>
+    </div>
+    <div class="row">
+
+        {{!-- Column of unwatched movies --}}
+        <div class="col">
+            <ul>
+                {{#each movies}}
+                {{#unless watched}}
+
+                <div class="row">
+                    <div class="col">
+                        <li>{{ movie_name }}</li>
+                    </div>
+                    <div class="col">
+                        <button data-movieId="{{this.id}}" class="watchMovie">Watch movie!</button>
+                    </div>
+                </div>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        {{!-- Column of watched movies --}}
+        <div class="col">
+            <ul>
+                {{#each movies}}
+                {{#if watched}}
+
+                <div class="row">
+                    <div class="col">
+                        <li>{{ movie_name }}</li>
+                    </div>
+                    <div class="col">
+                        <button data-movieId="{{this.id}}" class="unwatchMovie">Unwatch Movie!</button>
+                    </div>
+                </div>
+                
+                {{/if}}
+                {{/each}}
+            </ul>
+
+        </div>
+    </div>
+</div>
