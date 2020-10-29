@@ -10,7 +10,7 @@ var orm = {
         connection.query("SELECT * FROM movies", function(err, res){
             // display all movies in the movies table
             if (err) throw err;
-            console.table(res);
+            console.log(res);
         })
     },
     insertOne: function(movieTitle){
@@ -21,10 +21,10 @@ var orm = {
             console.log("Successfully added " + movieTitle)
         })
     },
-    updateOne: function(movieTitle, id, seen){
+    updateOne: function(id, seen){
         connection.query("UPDATE movies SET watched=? WHERE id=?", [seen, id],function(err, res){
             if (err) throw err;
-            console.log("Successfully updated " + movieTitle);
+            console.log("Successfully updated");
         })
     }
 }

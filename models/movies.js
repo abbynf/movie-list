@@ -12,10 +12,10 @@ var movie = {
             console.log(res)
         })
     },
-    update: function(movieTitle, id, seen){
+    update: function(id, seen){
         // Call orm to update chosen movie to watched or not watched
-        orm.updateOne(movieTitle, id, seen, function(res){
-            console.log(res)
+        orm.updateOne(id, seen, function(res){
+            console.log(res);
         })
     }
 }
