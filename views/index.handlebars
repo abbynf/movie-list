@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="col">
-            <p>Add movies down below to your movie list, then press the button to move them to your watched list!</p>
+            <p id="tagline">Add movies down below to your movie list, then press the button to move them to your watched list!</p>
         </div>
     </div>
     <div class="row">
@@ -54,7 +54,9 @@
 
         </div>
     </div>
-    <div class="row">
+
+    {{!-- row to add a movie --}}
+    <div class="row" id="addMovie">
         <div class="col">
             <h2>Add a Movie</h2>
         </div>
@@ -63,8 +65,6 @@
         <div class="row">
             <div class="col">
                 <input id="newTitle" type="text">
-            </div>
-            <div class="col">
                 <button class="btn btn-success" type="submit">Add Movie</button>
             </div>
         </div>

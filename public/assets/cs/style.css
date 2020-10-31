@@ -6,3 +6,42 @@ body {
     background-position: left top;
     ;
 }
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    font-size: 5rem;
+}
+
+#tagline {
+    text-align: center;
+    color: white;
+    margin: 50px auto;
+    font-size: 1.5rem;
+}
+
+li {
+    list-style-type: none
+}
+
+button {
+    background-color: #720303;
+
+}
+
+button:hover {
+    background-color: #640101;
+}
+
+* {
+    color: #f0f0f0;
+}
+
+#addMovie {
+    margin-top: 50px;
+}
+
+input {
+    text-align: right;
+}
