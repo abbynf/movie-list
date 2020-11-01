@@ -43,5 +43,6 @@ button:hover {
 }
 
 input {
-    text-align: right;
+    text-align: left;
+    color: black;
 }
